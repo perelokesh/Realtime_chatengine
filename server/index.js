@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors({origin: true}));
 
 
-app.post('/auth', async () => {
+app.post('/auth', async (req,res) => {
   const {username} = req.body;
   try{
     const r = await axios.put( 
